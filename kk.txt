@@ -1,0 +1,20 @@
+args 0 1 	;Plot Extra : Polynomial, Raw Data
+args 1 0 	;Weight Averageing) : None
+args 2 1 	;Urine Averageing : E48 (.9905)
+args 3 2 	;LVP Mode Select : Pre and Post Adjust
+args 4 1 	;Order of Fit
+args 5 123 	;Pain Threshold
+args 6 0 	;.....
+args 7 0 	;Plot Start (day)
+args 8 -1 	;Plot End (day)
+args 9 35 	;Fit Range LO (days)
+args 10 40 	;Fit Range HI (days)
+args 11 1 	;Interpolate Weight : Linear
+args 12 0 	;Interpolate FirstOfDay : Default
+args 13 1800 	;Primary (Sec/Sample)
+args 14 48 	;MaxWeightWindow
+args 15 RawWeight.txt
+args 16 0 	;.....
+args 17 0 	;Avg Weight Gain
+args 18 0 	;Avg Weight
+script off

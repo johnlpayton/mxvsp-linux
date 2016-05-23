@@ -1,0 +1,125 @@
+[Config]
+Compilator.SaveAll=0
+Compilator.Capture=0
+Compilator.HideOutput=0
+Compilator.LogType=0
+DefaultDir=K:\tmp\GCproto
+DefaultCPIndex=0
+LogtoEnd=1
+DontOpen=0
+AbsolutePath=0
+FileFormat=0
+ProjectFilesOnly=0
+[Project tree]
+GCproto
+	+GCproto
+		+Misc
+			Makefile
+			mxvsp.ini
+		+Headers
+			framer.h
+			jtypes.h
+			memlock.h
+			muxctl.h
+			muxevb.h
+			muxevbW.h
+			muxsock.h
+			muxsock_P.h
+			muxw2ctl.h
+			vdownload.h
+			vspmenu.h
+			vspterm.h
+			w32defs.h
+		+Source
+			conexpr.c
+			evbcmds.c
+			framer.c
+			gmxvsp.c
+			init.c
+			lapj_iface.c
+			memlockGTK.c
+			miscutil.c
+			muxctl.c
+			muxevb.c
+			muxlisten.c
+			muxpacket.c
+			muxsock.c
+			muxwrte.c
+			vdownload.c
+			vspmenu.c
+			vspterm.c
+		cproto.c
+		cproto.h
+		CPROTO.RC
+		J64.C
+[Open project files]
+0=muxctl.c
+1=mxvsp.ini
+2=muxevb.c
+3=lapj_iface.c
+4=muxevbW.h
+5=miscutil.c
+6=t.txt
+7=init.c
+8=memlockGTK.c
+9=muxevb.h
+10=..\..\Lapj\lapj_frame.c
+11=..\..\ParseStreams\lapj.h
+12=jlpstream.txt
+13=Makefile
+[Selected Project Files]
+Main=
+Selected=Makefile
+[muxctl.c]
+TopLine=331
+Caret=1,349
+Mark1=82,179
+Mark2=33,765
+[mxvsp.ini]
+TopLine=1
+Caret=10,2
+[muxevb.c]
+TopLine=1985
+Caret=1,2024
+Mark1=17,148
+Mark2=14,1825
+Mark3=9,869
+Mark4=36,1342
+Mark5=6,1868
+Mark6=1,1694
+[lapj_iface.c]
+TopLine=558
+Caret=7,595
+Mark1=9,350
+Mark2=7,303
+Mark3=1,201
+[muxevbW.h]
+TopLine=42
+Caret=25,70
+[miscutil.c]
+TopLine=234
+Caret=6,254
+[t.txt]
+TopLine=55
+Caret=1,84
+[init.c]
+TopLine=679
+Caret=28,715
+[memlockGTK.c]
+TopLine=13
+Caret=17,42
+[muxevb.h]
+TopLine=1
+Caret=1,1
+[..\..\Lapj\lapj_frame.c]
+TopLine=405
+Caret=47,422
+[..\..\ParseStreams\lapj.h]
+TopLine=179
+Caret=22,212
+[jlpstream.txt]
+TopLine=25
+Caret=21,55
+[Makefile]
+TopLine=7
+Caret=66,28

@@ -1,0 +1,90 @@
+echo -O2 -DIN_GCC -DCROSS_COMPILE
+ -W -Wall -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wold-style-definition
+ -isystem ./include
+ -I.
+ -I.
+ -I../../gcc
+ -I../../gcc/.
+ -I../../gcc/../include
+ -g0
+ -finhibit-size-directive
+ -fno-inline-functions -fno-exceptions -fno-zero-initialized-in-bss -fno-unit-at-a-time -l
+-O2 -DIN_GCC -DCROSS_COMPILE -W -Wall -Wwrite-strings -Wstrict-prototypes -Wmissing-proto
+
+
+cat > confdefs.h <<\EOF
+ typedef int __g77_integer;
+ typedef unsigned int __g77_uinteger;
+ typedef long __g77_longint;
+ typedef unsigned long __g77_ulongint;
+EOF
+
+
+make[4]: Entering directory `/home/jlp/build_env/gcc-3.4.6/build/m68k-elf/msoft-float/libiberty/testsuite'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/jlp/build_env/gcc-3.4.6/build/m68k-elf/msoft-float/libiberty/testsuite'
+make[3]: Leaving directory `/home/jlp/build_env/gcc-3.4.6/build/m68k-elf/msoft-float/libiberty'
+make[2]: Leaving directory `/home/jlp/build_env/gcc-3.4.6/build/m68k-elf/libiberty'
+make[1]: Leaving directory `/home/jlp/build_env/gcc-3.4.6/build/m68k-elf/libiberty'
+make[1]: Entering directory `/home/jlp/build_env/gcc-3.4.6/build/m68k-elf/libf2c'
+cd libI77;
+make CC='/home/jlp/build_env/gcc-3.4.6/build/gcc/xgcc -B/home/jlp/build_env/gcc-3.4.6/build/gcc/ -B/usr/local/coldfire/m68k-elf/bin/ -B/usr/local/coldfire/m68k-elf/lib/ -isystem /usr/local/coldfire/m68k-elf/include -isystem /usr/local/coldfire/m68k-elf/sys-include' LD='/usr/local/coldfire/m68k-elf/bin/ld' LIBTOOL='/bin/sh ./libtool' WARN_CFLAGS='-W -Wall' CFLAGS='-O2 -g -O2' CPPFLAGS='' DESTDIR='' AR='m68k-elf-ar' RANLIB='m68k-elf-ranlib' prefix='/usr/local/coldfire' exec_prefix='/usr/local/coldfire' libdir='/usr/local/coldfire/lib' libsubdir='/usr/local/coldfire/lib/gcc/m68k-elf/3.4.6' tooldir='/usr/local/coldfire/m68k-elf' all
+make[2]: Entering directory `/home/jlp/build_env/gcc-3.4.6/build/m68k-elf/libf2c/libI77'
+/bin/sh ../libtool
+  --mode=compile
+  /home/jlp/build_env/gcc-3.4.6/build/gcc/xgcc
+  -B/home/jlp/build_env/gcc-3.4.6/build/gcc/
+  -B/usr/local/coldfire/m68k-elf/bin/
+  -B/usr/local/coldfire/m68k-elf/lib/
+  -isystem /usr/local/coldfire/m68k-elf/include
+  -isystem /usr/local/coldfire/m68k-elf/sys-include
+  -c
+  -DSkip_f2c_Undefs
+  -DAllow_TYQUAD
+  -I.
+  -I../../../../libf2c/libI77
+  -I.. -I../../../../libf2c/libI77/..
+  -DHAVE_CONFIG_H
+  -W
+  -Wall
+  -O2
+  -g
+  -O2
+  ../../../../libf2c/libI77/backspace.c
+/home/jlp/build_env/gcc-3.4.6/build/gcc/xgcc
+  -B/home/jlp/build_env/gcc-3.4.6/build/gcc/
+  -B/usr/local/coldfire/m68k-elf/bin/
+  -B/usr/local/coldfire/m68k-elf/lib/
+  -isystem /usr/local/coldfire/m68k-elf/include
+  -isystem /usr/local/coldfire/m68k-elf/sys-include
+  -c
+  -DSkip_f2c_Undefs
+  -DAllow_TYQUAD
+  -I.
+  -I../../../../libf2c/libI77
+  -I..
+  -I../../../../libf2c/libI77/..
+  -DHAVE_CONFIG_H
+  -W
+  -Wall
+  -O2
+  -g
+  -O2
+  ../../../../libf2c/libI77/backspace.c
+  -o backspace.o
+In file included from ../../../../libf2c/libI77/../f2c.h:35,
+                 from ../../../../libf2c/libI77/backspace.c:3:
+../../../../libf2c/libI77/../g2c.h:25: error: conflicting types for '__g77_integer'
+<internal>:0: error: previous declaration of '__g77_integer' was here
+../../../../libf2c/libI77/../g2c.h:26: error: conflicting types for '__g77_uinteger'
+<internal>:0: error: previous declaration of '__g77_uinteger' was here
+../../../../libf2c/libI77/../g2c.h:37: error: conflicting types for '__g77_longint'
+<internal>:0: error: previous declaration of '__g77_longint' was here
+../../../../libf2c/libI77/../g2c.h:38: error: conflicting types for '__g77_ulongint'
+<internal>:0: error: previous declaration of '__g77_ulongint' was here
+make[2]: *** [backspace.lo] Error 1
+make[2]: Leaving directory `/home/jlp/build_env/gcc-3.4.6/build/m68k-elf/libf2c/libI77'
+make[1]: *** [i77] Error 2
+make[1]: Leaving directory `/home/jlp/build_env/gcc-3.4.6/build/m68k-elf/libf2c'
+make: *** [all-target-libf2c] Error 2
+[jlp@Black850 build]$ 

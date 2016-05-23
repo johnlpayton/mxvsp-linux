@@ -1,0 +1,91 @@
+
+gcc -c muxsock.c -o muxsock.o -DEASYWINDEBUG=5 -DUSEGDK=1 -DENABLELAPJ=1 -DLAPJDEBUG=1 -DUSEGDKLOCKS=1 -DUSEPLOCKS=0 -g -DGLIB_DISABLE_DEPRECATION_WARNINGS -DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATION_WARNINGS -Wformat=0 `pkg-config gtk+-3.0 vte-2.90 libglade-2.0 --cflags`
+gcc vspterm.o vspmenu.o muxpacket.o muxctl.o muxwrte.o framer.o miscutil.o muxsock.o muxlisten.o evbcmds.o lapj_iface.o muxevb.o init.o vdownload.o vupload.o ./Minini/minIni.o ../../Lapj/lapj.a memlockGTK.o gmxvsp.o -o gmxvsp `pkg-config gtk+-3.0 vte-2.90 --libs`
+[jlp@Black850 mxvsp]$ gdb ./gmxvsp
+GNU gdb (GDB) Fedora 7.7.1-21.fc20
+Copyright (C) 2014 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "i686-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./gmxvsp...done.
+(gdb) run
+Starting program: /home/jlp/vsptty/gnome/mxvsp/gmxvsp 
+Traceback (most recent call last):
+  File "/usr/share/gdb/auto-load/usr/lib/libgobject-2.0.so.0.3800.2-gdb.py", line 9, in <module>
+    from gobject import register
+  File "/usr/share/glib-2.0/gdb/gobject.py", line 3, in <module>
+    import gdb.backtrace
+ImportError: No module named backtrace
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/libthread_db.so.1".
+[New Thread 0xb7bd9b40 (LWP 14740)]
+[New Thread 0xb7149b40 (LWP 14741)]
+[New Thread 0xb6948b40 (LWP 14742)]
+InitListenSock.socket: 10
+InitListenSock.bind: 0
+InitListenSock.listen: 0
+[New Thread 0xb6147b40 (LWP 14743)]
+muxSocKListen: Thread Started socket = 10
+Start EVBopen
+ModemStatus 0x4146
+[New Thread 0xb5946b40 (LWP 14744)]
+EVBopen Port = 13 hEVB = 0x80fd120
+EVBThread Started
+EVBThread: pT= 0xb5946124 
+isTxDevEmpty 0xb5946124 T
+isTxDevEmpty 0xb5946124 T
+try_writeDev
+isTxDevEmpty 0xb5946124 T
+try_writeDev: 14
+EVBThread:EVBActive = 1
+Hello World
+</home/jlp/vsptty/gnome/mxvsp/gmxvsp>
+EVBThread:switch in, maxfd= 13
+EVBThread:switch out, e= 2
+DoDelayedWrite: write returns 14 dwWrite 14
+EVBThread: DoDelayedWrite pT->fWaitingOnWrite 0
+EVBThread:switch in, maxfd= 13
+EVBThread:switch out, e= 1
+DoEVBCommand: Sock e=1 cmubuf[0]=60
+EVBThread:switch in, maxfd= 13
+EVBThread:switch out, e= 1
+EVBThread: fWaitingOnRead
+DoStartRead:Port 0x0000000d readflag -1248564416 dwRead 8
+SRP=: 0x0822940c 8 Hdr <5f><54><72><79>
+20 43 Tail <6f><6e>
+HandleRxOutbound
+HandleRxOutbound: 0x0822940c 8 Hdr <5f><54><72><79>
+20 43 Tail <6f><6e>
+SendUnFramed
+SendFramed.1: 0xb50049b0 8 Hdr <5f><54><72><79>
+20 43 Tail <6f><6e>
+SendFramed len 14
+SendFramed.2: 0xb5004cb8 14 Hdr <10><02><18><20>
+5f 54 72 79 20 43 6f 6e Tail <10><03>
+EVBThread:switch in, maxfd= 13
+DoWCtlReq_1:: pp = 0x8063c00 
+pp 0x08063c00 fm=2(EVB),to 0x18, len 14, iuse 1
+EVBThread:switch out, e= 1
+EVBThread: fWaitingOnRead
+DoStartRead:Port 0x0000000d readflag -1248564416 dwRead 2
+SRP=: 0x0822940c 2 Short Frame (2)6e 33 
+HandleRxOutbound
+HandleRxOutbound: 0x0822940c 2 Short Frame (2)6e 33 
+SendUnFramed
+SendFramed.1: 0xb50049b0 2 Short Frame (2)6e 33 
+SendFramed len 8
+SendFramed.2: 0xb5004cb8 8 Hdr <10><02><18><20>
+6e 33 Tail <10><03>
+EVBThread:switch in, maxfd= 13
+DoWCtlReq_1:: pp = 0x8063c00 
+pp 0x08063c00 fm=2(EVB),to 0x18, len 8, iuse 1
+
